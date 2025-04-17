@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Author" content="Ulices Gonzalez"/>
-        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-        <title>Member</title>
-    </head>
-    <body>
-        <header>
-            <h1>Software Engineering Class SFSU</h1>
-            <h1>Spring 2025</h1>
-            <h1>Section 02</h1>
-            <h1><a class="home-button" href="/">Team 03</a></h1>
-        </header>
-        <main>
-            <article>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Sergio Aguilar" />
+    <link rel="stylesheet" type="text/css" href="/static/css/basic.css">
+    <title>Sergio Aguilar</title>
+</head>
+
+<body>
+    {% include 'partials/about/header.html' %}
+    <main>
+        <article>
+            <div>
                 <div>
-                    <div>
-                        <h3>Name: Sergio Aguilar</h3>
-                        <img src="/static/imgs/sergio.jpg" width="25%" height="25%" alt="" />
-                        <h3>Role: Back-end Engineer</h3>
-                        <h4>About Me</h4>
-                        <p>My name is Sergio, I spend my time coding, sports, or in a forest</p>
-                    </div>
+                    <h3>Name: Sergio Aguilar</h3>
+                    <img src="/static/imgs/sergio.jpg" width="25%" height="25%" alt="" />
+                    <h3>Role: Back-End Engineer</h3>
+                    <h4>About Me</h4>
+                    <p>My name is Sergio, I spend my time coding, sports, or in a forest</p>
                 </div>
-            </article>
-        </main>
-        <footer>
-            ©Team03
-        </footer>
-    </body>
+            </div>
+        </article>
+    </main>
+    {% include 'partials/about/footer.html' %}
+</body>
+
 </html>

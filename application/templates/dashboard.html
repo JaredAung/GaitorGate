@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'partials/head.html' %}
+
+<body>
+    
+    {% include 'partials/header.html' %}
+
+    {% include 'partials/sidebars.html' %}
+
+    <main>
+        <form method="POST" action="/search">
+            {% include 'partials/search.html' %}
+        </form>
+    </main>
+
+    {% include 'partials/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/toggleSides.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Author" content="Marco Barraza"/>
-        <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
-        <title>Marco Barraza</title>
-    </head>
-    <body>
-        <header>
-            <h1>Software Engineering Class SFSU</h1>
-            <h1>Spring 2025</h1>
-            <h1>Section 02</h1>
-            <h1><a class="home-button" href="/">Team 03</a></h1>
-        </header>
-        <main>
-            <article>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Marco Barraza" />
+    <link rel="stylesheet" type="text/css" href="/static/css/basic.css">
+    <title>Marco Barraza</title>
+</head>
+
+<body>
+    {% include 'partials/about/header.html' %}
+    <main>
+        <article>
+            <div>
                 <div>
-                    <div>
-                        <h3>Name: Marco Barraza</h3>
-                        <img src="../assets/marco.jpg" width="323" height="428" alt="Picture of Marco" />
-                        <h3>Role: Front End</h3>
-                        <h4>About Me</h4>
-                        <p>Hi, I'm Marco! I'm currently in my senior year studying Computer Science at San Francisco State University.</p>
-                        <p>After I earn my degree, I plan on taking some time to travel before starting a job.</p> 
-                        <p>When I am not coding and learning new tech, I enjoy traveling and experiencing new cultures.</p>
-                        <p>I also like going to Tahoe and snowboarding whenever I get the chance!</p>
-                    </div>
+                    <h3>Name: Marco Barraza</h3>
+                    <h3>Role: Front/Back-End Engineer</h3>
+                    <h4>About Me</h4>
+                    <p>Hi, I'm Marco! I'm currently in my senior year studying Computer Science at San Francisco State
+                        University.</p>
+                    <p>After I earn my degree, I plan on taking some time to travel before starting a job.</p>
+                    <p>When I am not coding and learning new tech, I enjoy traveling and experiencing new cultures.</p>
+                    <p>I also like going to Tahoe and snowboarding whenever I get the chance!</p>
                 </div>
-            </article>
-        </main>
-        <footer>
-            ©Team03
-        </footer>
-    </body>
+            </div>
+        </article>
+    </main>
+    {% include 'partials/about/footer.html' %}
+</body>
+
 </html>

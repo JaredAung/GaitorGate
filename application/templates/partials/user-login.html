@@ -1,0 +1,26 @@
+<h2>Log In</h2>
+<div class="login-form">
+    {% if loginMessage %}
+    <div class="error-message">
+        {{ loginMessage }}
+    </div>
+    {% endif %}
+
+    <form method="POST" action="" enctype="application/x-www-form-urlencoded">
+        <div class="login-item">
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" placeholder="Username" />
+        </div>
+
+        <div class="login-item">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="Password" />
+        </div>
+
+        <div class="logging-button">
+            <button class="login-button" type="submit">Log In</button>
+            <button class="register-button"><a href="/register" class="register-redirect">Register</a></button>
+            <button class="reset-button" type="reset">Clear</button>
+        </div>
+    </form>
+</div>

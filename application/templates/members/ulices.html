@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Author" content="Ulices Gonzalez"/>
-        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-        <title>Ulices Gonzalez</title>
-    </head>
-    <body>
-        <header>
-            <h1>Software Engineering Class SFSU</h1>
-            <h1>Spring 2025</h1>
-            <h1>Section 02</h1>
-            <h1><a class="home-button" href="/">Team 03</a></h1>
-        </header>
-        <main>
-            <article>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Ulices Gonzalez" />
+    <link rel="stylesheet" type="text/css" href="/static/css/basic.css">
+    <title>Ulices Gonzalez</title>
+</head>
+
+<body>
+    {% include 'partials/about/header.html' %}
+    <main>
+        <article>
+            <div>
                 <div>
-                    <div>
-                        <h3>Name: Ulices Gonzalez</h3>
-                        <img src="/static/imgs/ulices.jpg" width="25%" height="25%" alt="Picture of Ulices Gonzalez" />
-                        <h3>Role: Front End Lead</h3>
-                        <h4>About Me</h4>
-                        <p>Hello, my name is Sergio Ulices Gonzalez Guerrero but I typically just stick to Ulices Gonzalez.</p>
-                        <p>I am a First Generation Scholar from Acambaro, Guanajuato, MX but grew up in the Bay Area and</p>
-                        <p>have lived in Richmond since 2002. I am a Computer Science Major here at SFSU and am also</p>
-                        <p>planning to pursue a Master's Degree in Library and Information Science at SJSU. Ideally</p>
-                        <p>after graduating I hope to find a position within the realm of Gaming specifically in a</p>
-                        <p>position focused on QA Testing and Debugging.</p>
-                    </div>
+                    <h3>Name: Ulices Gonzalez</h3>
+                    <img src="/static/imgs/ulices.jpg" width="25%" height="25%" alt="Picture of Ulices Gonzalez" />
+                    <h3>Role: Front-End Lead</h3>
+                    <h4>About Me</h4>
+                    <p>Hello, my name is Sergio Ulices Gonzalez Guerrero but I typically just stick to Ulices Gonzalez.
+                    </p>
+                    <p>I am a First Generation Scholar from Acambaro, Guanajuato, MX but grew up in the Bay Area and</p>
+                    <p>have lived in Richmond since 2002. I am a Computer Science Major here at SFSU and am also</p>
+                    <p>planning to pursue a Master's Degree in Library and Information Science at SJSU. Ideally</p>
+                    <p>after graduating I hope to find a position within the realm of Gaming specifically in a</p>
+                    <p>position focused on QA Testing and Debugging.</p>
                 </div>
-            </article>
-        </main>
-        <footer>
-            ©Team03
-        </footer>
-    </body>
+            </div>
+        </article>
+    </main>
+    {% include 'partials/about/footer.html' %}
+</body>
+
 </html>

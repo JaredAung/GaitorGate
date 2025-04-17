@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Author" content="Ulices Gonzalez"/>
-        <link rel="stylesheet" type="text/css" href="static/css/style.css">
-        <title>Index</title>
-    </head>
-    <body>
-        <header>
-            <h1>Software Engineering Class SFSU</h1>
-            <h1>Spring 2025</h1>
-            <h1>Section 02</h1>
-            <h1><a class="home-button" href="/">Team 03</a></h1>
-        </header>
-        <main>
-            <h2>Welcome</h2>
-            <ul>
-                <li><a href="members/jared">Jared Aung</a></li>
-                <li><a href="members/marco">Marco Barraza</a></li>
-                <li><a href="members/andre">Andre Dargani</a></li>
-                <li><a href="members/ulices">Ulices Gonzalez</a></li>
-                <li><a href="members/mowtee">Mowtee Sailan</a></li>
-                <li><a href="members/akram">Akram Alakel</a></li>
-                <li><a href="members/sergio">Sergio Aguilar</a></li>
-            </ul>
-        </main>
-        <footer>
-            ©Team03
-        </footer>
-    </body>
+
+{% include 'partials/head.html' %}
+
+<body>
+    
+    {% include 'partials/header.html' %}
+
+    {% include 'partials/sidebars.html' %}
+
+    <main>
+        <img class="school" src="/static/imgs/sfsu.jpg" width="75%" height="75%" alt="SFSU Picture" />
+    </main>
+
+    {% include 'partials/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/toggleSides.js') }}"></script>
+
+</body>
+
 </html>

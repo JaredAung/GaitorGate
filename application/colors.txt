@@ -1,0 +1,43 @@
+Primary Color Palette
+
+Pantone 2755C
+Print: C97  M100  Y0  K30
+HTML: #231161 used
+
+Pantone 2755C 85% TINT
+Print: C82  M85  Y0  K26
+HTML: #463077 used
+
+Pantone 117C
+Print: C6  M27  Y100  K12
+HTML: #C99700 used
+
+Pantone 117C 60% TINT
+Print: C4  M16  Y60  K7
+HTML: #E9D597 used
+
+Secondary Color Palette
+
+Pantone 647
+Print: C100  M56  Y0  K23
+HTML: #26547C used
+
+Pantone 5545
+Print: C62  M19  Y45  K50
+HTML: #38635A used
+
+Pantone 4485
+Print: C0  M26  Y100  K77
+HTML: #604C11 used
+
+Pantone 5757
+Print: C27  M0  Y95  K55
+HTML: #6B702B used
+
+Pantone 174
+Print: C0  M70  Y100  K36
+HTML: #933311 used
+
+Pantone Cool Gray 11
+Print: C44 M34 Y22 K77
+HTML: #53565a used 

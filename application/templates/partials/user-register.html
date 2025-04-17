@@ -1,0 +1,36 @@
+<h2>Register</h2>
+<div class="registration-form">
+    {% if registrationMessage %}
+    <div class="error-message">
+        {{ registrationMessage }}
+    </div>
+    {% endif %}
+
+    <form method="POST" action="/register" novalidate>
+        <div class="registration-item">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="user@email.ext" required />
+        </div>
+
+        <div class="registration-item">
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" placeholder="Username" required />
+        </div>
+
+        <div class="registration-item">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="Password" required />
+        </div>
+
+        <div class="registration-item">
+            <label for="confirm_password">Confirm Password: </label>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Password" required />
+        </div>
+
+        <div class="registration-button">
+            <button class="register-button" type="submit">Register</button>
+            <button class="login-button"><a href="/login" class="login-redirect">Log In</a></button>
+            <button class="reset-button" type="reset">Clear</button>
+        </div>
+    </form>
+</div>

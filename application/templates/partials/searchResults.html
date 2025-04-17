@@ -1,0 +1,40 @@
+<div id="results-container" class="results-container">
+    {% if data %}
+    {% for item in data %}
+    <div class="result-item"> <br>
+        <div class="result-info">
+            {{ item.name }}, {{ item.company }}, <a href="{{ item.url }}" target="_blank">View</a>, {{ item.category }},
+            {{ item.published_date }}
+        </div>
+        <div><img src="{{ item.thumbnail_url }}" height="25%" width="25%"></div>
+        
+        {% set index_id = item.idIndex %}
+        {% include 'partials/rating-form.html' %}
+        {% include 'partials/review-form.html' %}
+        </br>
+    </div>
+    {% endfor %}
+    {% elif request.method == 'POST' %}
+    <p>No results found.</p>
+    {% endif %}
+
+    <div class="paging">
+        {% if total_pages > 1 %}
+        {% if current_page > 1 %}
+        <a href="{{ url_for('search.search', page=current_page - 1, search=request.form.get('search', request.args.get('search', '')), filter=request.form.get('filter', request.args.get('filter', '')), filter_options=request.form.get('filter-options', request.args.get('filter-options', ''))) }}">Previous</a>
+        {% endif %}
+    
+        {% for page in range(1, total_pages + 1) %}
+        {% if page == current_page %}
+        <span class="current-page">{{ page }}</span>
+        {% else %}
+        <a href="{{ url_for('search.search', page=page, search=request.form.get('search', request.args.get('search', '')), filter=request.form.get('filter', request.args.get('filter', '')), filter_options=request.form.get('filter-options', request.args.get('filter-options', ''))) }}">{{ page }}</a>
+        {% endif %}
+        {% endfor %}
+    
+        {% if current_page < total_pages %}
+        <a href="{{ url_for('search.search', page=current_page + 1, search=request.form.get('search', request.args.get('search', '')), filter=request.form.get('filter', request.args.get('filter', '')), filter_options=request.form.get('filter-options', request.args.get('filter-options', ''))) }}">Next</a>
+        {% endif %}
+        {% endif %}
+    </div>
+</div>

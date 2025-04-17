@@ -1,0 +1,16 @@
+<article class="user-history">
+    <div class="organizer">
+        <div class="user-info">
+            <h3>{{ title }}</h3> {% if data %}
+                <ul class="search-results"> {% for item in data %}
+                    <li class="result-item"> <div class="result-info">
+                            <span class="label">Tool Name:</span> {{ item[1] }}<br> <span class="label">Search Query:</span> {{ item[2] }}<br> <span class="label">Timestamp:</span> {{ item[3] }} </div>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% elif request.method == 'POST' %}
+                <p class="no-results">No results found for your search.</p> {% else %}
+                <p class="no-history">Your search history is currently empty.</p> {% endif %}
+        </div>
+    </div>
+</article>

@@ -1,0 +1,21 @@
+<h2>Search</h2>
+<div class="search-form">
+    <div class="filter-container">
+        <select name="filters[]" class="filter-dropdown">
+            <option class="dropdown-option" value="">Filter</option>
+            <option class="dropdown-option" value="categories">Categories</option>
+            <option class="dropdown-option" value="platform">Platform</option>
+            <option class="dropdown-option" value="publishing">Publishing Date</option>
+        </select>
+        <select name="filter-options[]" class="filter-dropdown">
+            <option class="dropdown-option" value="">Option</option>
+        </select>
+    </div>
+    <input class="search-bar" type="text" name="search" placeholder="Search">
+    <div class="filter-buttons">
+        <button type="add-button" class="add-filter-button">+</button>
+        <button type="remove-button" class="remove-filter-button">-</button>
+    </div>
+    <button class="submit-button" type="submit">Search</button>
+    <script src="{{ url_for('static', filename='js/dropdowns.js') }}"></script>
+</div>

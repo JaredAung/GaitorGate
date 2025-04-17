@@ -1,0 +1,24 @@
+<h2>Data Upload </h2>
+    <div class="upload-form">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="upload-item">
+                <label for="title">Upload Title:</label>
+                <input type="text" name="title" id="title" placeholder="Title" required />
+            </div>
+
+            <div class="upload-item">
+                <label for="info">Upload Info:</label>
+                <input type="text" name="description" id="info" placeholder="Info" required />
+            </div>
+
+            <div class="upload-item">
+                <label for="video">Upload Image:</label>
+                <input type="file" name="imageUpload" id="dataImage" accept="image/*" required />
+            </div>
+
+            <div class="uploading-button">
+                <button class="upload-button" type="submit">Upload</button>
+                <button class="reset-button" type="reset">Clear</button>
+            </div>
+        </form>
+    </div>

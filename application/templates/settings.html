@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'partials/head.html' %}
+
+<body>
+    
+    {% include 'partials/header.html' %}
+
+    {% include 'partials/sidebars.html' %}
+
+    <main>
+        <h2>SETTINGS IN PROGRESS</h2>
+        <img class="alligator" src="/static/imgs/alli.png" width="37.5%" height="37.5%" alt="Alli Picture" />
+    </main>
+
+    {% include 'partials/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/toggleSides.js') }}"></script>
+
+</body>
+
+</html>
