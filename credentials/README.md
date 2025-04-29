@@ -31,7 +31,7 @@
 
     2. Once connected to the server, open a new terminal and run:
 
-           mysql -u team3admin -p -h 127.0.0.1 -P 3307
+           mysql -u team3admin -p -h 127.0.0.1 -P 3306
 
     3. To verify connection, enter the following, team3db should be one of the listed databases.
 
