@@ -1,0 +1,58 @@
+<div class="admin-info">
+    <h3 class="dash">Your Tools</h3>
+    <div class="tool-container">
+        {% if tool_summary %}
+        <ul class="tool-list">
+            {% for tool in tool_summary %}
+            <h2>
+                <a href="{{ tool.url }}" target="_blank" class="tool-title">{{ tool.name }}</a>
+            </h2>
+
+            {% if tool.thumbnail_url %}
+            <img src="{{ tool.thumbnail_url }}" alt="{{ tool.name }} thumbnail" class="tool-thumbnail" height="21.25%"
+                width="21.25%">
+            {% endif %}
+
+            <div class="tool-rating">
+                {% if tool.average_rating > 0 %}
+                <span class="rating-value">{{ tool.average_rating | round(2) }}/5.0</span>
+                {% else %}
+                <span class="no-rating">No ratings yet</span>
+                {% endif %}
+            </div>
+
+            <div class="tool-body">
+                <div><strong>Version:</strong> {{ tool.version }}</div>
+                <div><strong>Released:</strong> {{ tool.published_date }}</div>
+                <div><strong>Platform:</strong> {{ tool.platforms }}</div>
+                <div><strong>Category:</strong> {{ tool.category }}</div>
+                <div><strong>Price:</strong> {{ tool.pricing }}</div>
+            </div>
+
+            <div class="tool-description">
+                {{ tool.description or "No description provided." }}
+            </div>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No tools listed for your company yet.</p>
+        {% endif %}
+    </div>
+
+    <h3 class="dash">Recent Reviews for Your Tools</h3>
+    <div class="tool-container">
+        {% if reviews %}
+        {% for review in reviews %}
+        <div class="review">
+            <div class="review-header">
+                <span class="review-user">{{ review.tool_name }}</span>
+                <span class="review-date">{{ review.created_at }}</span>
+            </div>
+            <p class="review-text">{{ review.review_text }}</p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No reviews for your tools yet.</p>
+        {% endif %}
+    </div>
+</div>

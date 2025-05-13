@@ -2,27 +2,6 @@
     text-align: center;
 }
 
-@font-face {
-    font-family: 'Cormorant Garamond';
-    src: url('static/fonts/Cormorant_Garamond/static/CormorantGaramond-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Cormorant Garamond';
-    src: url('static/fonts/Cormorant_Garamond/static/CormorantGaramond-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Cormorant Garamond';
-    src: url('static/fonts/Cormorant_Garamond/static/CormorantGaramond-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
 .about-head {
     padding: 0px;
     padding-bottom: 16px;
@@ -61,7 +40,6 @@ h5,
 a,
 p,
 footer {
-    font-family: 'Cormorant Garamond', serif;
     text-decoration: none;
 }
 
@@ -125,3 +103,14 @@ img {
     border-style: groove;
     border-color: black;
 }
+
+.team-info a {
+    font-family: "Aktiv Grotesk", sans-serif;
+    font-size: clamp(16px, 1.75vw, 18px);
+    color: #000000;
+    transition: 0.3s ease;
+  }
+  
+  .team-info a:hover {
+    font-size: clamp(18px, 2vw, 21px);
+  }

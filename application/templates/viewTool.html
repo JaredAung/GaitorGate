@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'partials/head.html' %}
+
+<body>
+    
+    {% include 'partials/header.html' %}
+
+    {% include 'partials/sidebars.html' %}
+
+    <main>
+        {% include 'partials/tool.html' %}
+    </main>
+    
+    {% include 'partials/alli.html' %}
+    {% include 'partials/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/toggleSides.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/clearFavorites.js') }}"></script>
+
+</body>
+
+</html>

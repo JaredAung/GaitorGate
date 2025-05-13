@@ -12,7 +12,7 @@
 3. SSH password or key: team3key.pem (Located in the credentials folder.)
 4. Database URL or IP and port used.
     <br><strong> NOTE THIS DOES NOT MEAN YOUR DATABASE NEEDS A PUBLIC FACING PORT.</strong> But knowing the IP and port number will help with SSH tunneling into the database. The default port is more than sufficient for this class.
-    Databade IP : 127.0.0.1         Port : 3307
+    Databade IP : 127.0.0.1         Port : 3306
 5. Database username: team3admin
 6. Database password: 12345
 7. Database name (basically the name that contains all your tables): team3db
@@ -27,7 +27,7 @@
     Method 1 (Database Access in MySQL CLI)
     1. On local machine, open terminal and enter the following command for ssh tunnelling.
        
-           ssh -i "absolute path to team3Key.pem" -L 3307:127.0.0.1:3306 ubuntu@18.222.76.244
+           ssh -i "absolute path to team3Key.pem" -L 3306:127.0.0.1:3306 ubuntu@18.222.76.244
 
     2. Once connected to the server, open a new terminal and run:
 

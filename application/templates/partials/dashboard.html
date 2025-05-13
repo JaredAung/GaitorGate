@@ -1,0 +1,8 @@
+{% if session.Account_Type == 'Company' %}
+{% include 'partials/admin-dash.html' %}
+{% elif session.Account_Type == 'General'
+or session.Account_Type == 'Student' %}
+{% include 'partials/user-dash.html' %}
+{% else %}
+{% include 'partials/guest-dash.html' %}
+{% endif %}

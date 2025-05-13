@@ -1,0 +1,17 @@
+{% if current_user.is_authenticated %}
+<div class="favorite-container">
+  <form method="POST" action="{{ url_for('favorites.toggle_favorite') }}">
+    <input type="hidden" name="index_id" value="{{ index_id }}">
+    
+    {% if is_favorited(index_id, current_user.id) %}
+      <button type="submit" class="favorite-button favorited">
+        <i class="fas fa-heart"></i> Remove from Favorites
+      </button>
+    {% else %}
+      <button type="submit" class="favorite-button">
+        <i class="far fa-heart"></i> Add to Favorites
+      </button>
+    {% endif %}
+  </form>
+</div>
+{% endif %} 

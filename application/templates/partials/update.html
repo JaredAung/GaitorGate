@@ -1,0 +1,72 @@
+<div class="upload-form">
+    <form action="" method="post" enctype="multipart/form-data">
+        <h2>Data Update</h2>
+
+        <div class="upload-item">
+            <label for="name">Tool Name:</label>
+            <input type="text" name="name" id="name" placeholder="Official Tool Name" required />
+        </div>
+
+        <div class="upload-item">
+            <label for="url">Tool URL:</label>
+            <input type="url" name="url" id="url" placeholder="https://example.com" required />
+        </div>
+
+        <div class="upload-item">
+            <label for="thumbnailUrl">Thumbnail URL:</label>
+            <input type="url" name="thumbnailUrl" id="thumbnailUrl" placeholder="https://example.com/image.jpg" />
+        </div>
+
+        <div class="upload-item">
+            <label for="version">Version:</label>
+            <input type="text" name="version" id="version" placeholder="1.0.0" />
+        </div>
+
+        <div class="upload-item">
+            <label for="description">Tool Description:</label>
+            <input type="text" name="description" id="description" placeholder="Official Tool Description" required />
+        </div>
+
+        <div class="upload-item">
+            <label for="pricing">Pricing ($):</label>
+            <input type="number" name="pricing" id="priapplication/templates/partials/upload.htmlcing"
+                placeholder="0.00" step="0.01" min="0" />
+        </div>
+
+        <div class="platform-container">
+            <label for="platform">Platform:</label>
+            <select name="platform" id="platform" class="platform-dropdown" required>
+                <option value="">Select Platform</option>
+                <option value="Web App">Web App</option>
+                <option value="Mobile App">Mobile App</option>
+                <option value="Browser Extension">Browser Extension</option>
+                <option value="API">API</option>
+            </select>
+        </div>
+
+        <div class="button-row">
+            <button type="button" class="add-platform-button">Add Platform</button>
+            <button type="button" class="remove-platform-button">Remove Platform</button>
+        </div>
+
+        <div class="category-container">
+            <label for="category">Category:</label>
+            <select name="category" id="category" class="category-dropdown" required>
+                <option value="">Select Category</option>
+                <option value="Productivity & Workflow">Productivity & Workflow</option>
+                <option value="Code Assistance">Code Assistance</option>
+                <option value="Academic Assistance">Academic Assistance</option>
+                <option value="Career Development">Career Development</option>
+                <option value="Mental Health Support">Mental Health Support</option>
+                <option value="Creative Applications">Creative Applications</option>
+            </select>
+
+        </div>
+
+        <div class="uploading-button">
+            <button class="upload-button" type="submit">Update</button>
+            <button class="reset-button" type="reset">Clear</button>
+        </div>
+    </form>
+</div>
+<script src="{{ url_for('static', filename='js/uploadDropdowns.js') }}"></script>

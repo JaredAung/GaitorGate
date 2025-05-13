@@ -1,16 +1,7 @@
-<article class="user-account">
-    <div class="organizer">
-        <div class="user-info">
-            <h3>{{ user.username }}'s Profile</h3>
-            <img src="/static/imgs/avatar.png" width="300" height="300" alt="Profile Picture" />
-            <p id="username">Username: {{ user.username }}</p>
-            <p id="email">Email: {{ user.email }}</p>
-
-            {% if adminInfo %}
-            <div class="admin-info">
-                {{ adminInfo }}
-            </div>
-            {% endif %}
-        </div>
-    </div>
-</article>
+<div class="info">
+    <h3>{{ user.username }}'s Profile</h3>
+    <img src="{{ session.profile_pic_url }}" width="270" height="270" alt="Profile Picture" />
+    <p id="username">Username: {{ user.username }}</p>
+    <p id="email">Email: {{ user.email }}</p>
+    <p id="Account_Type">Account Type: {{ user.Account_Type }}</p>
+</div>

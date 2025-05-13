@@ -1,0 +1,134 @@
+.sidebar-left,
+.sidebar-right {
+  background-color: #231161;
+  padding: clamp(8px, 1vw, 16px);
+  text-align: left;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  max-width: clamp(120px, 25vw, 180px);
+  transition: 0.3s ease;
+  z-index: 200;
+  overflow-y: auto;
+}
+
+.sidebar-left {
+  left: 0;
+}
+
+.sidebar-right {
+  right: 0;
+}
+
+.left-nav,
+.right-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: 3s ease;
+}
+
+.left-nav li,
+.right-nav li {
+  margin-bottom: clamp(16px, 1vw, 32px);
+}
+
+.left-nav a,
+.right-nav a {
+  font-family: "Aktiv Grotesk", sans-serif;
+  font-size: clamp(14px, 1.25vw, 16px);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f0f0f0;
+  transition: 0.3s ease;
+}
+
+.left-nav a:hover,
+.right-nav a:hover {
+  font-size: clamp(14px, 1.25vw, 16px);
+  color: #c99700;
+}
+
+.icon-container {
+  width: clamp(27px, 4vw, 48px);
+  height: clamp(27px, 4vw, 48px);
+  margin-left: clamp(4px, 1vw, 8px);
+  margin-right: clamp(4px, 1vw, 8px);
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: rgba(83, 86, 90, 1);
+  border: clamp(4px, 0.5vw, 8px) solid #604c11;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.icon-container:hover {
+  border: clamp(4px, 0.5vw, 8px) solid #c99700;
+  transition: 0.3s ease;
+}
+
+.sidebar-icon {
+  border-radius: 37.5%;
+  width: clamp(21px, 2.5vw, 36px);
+  height: clamp(21px, 2.5vw, 36px);
+  vertical-align: middle;
+}
+
+.pfp-icon {
+  border-radius: 50%;
+  width: clamp(21px, 2.5vw, 36px);
+  height: clamp(21px, 2.5vw, 36px);
+  vertical-align: middle;
+}
+
+.left-nav .history,
+.left-nav .new_search,
+.left-nav .predictive_search,
+.right-nav .profile-link,
+.right-nav .settings {
+  display: flex;
+  align-items: center;
+}
+
+.left-nav li a,
+.right-nav li a {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-right.collapsed .right-nav li a,
+.sidebar-left.collapsed .left-nav li a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: -9999px;
+  transition: 0.9s ease;
+}
+
+.toggle-button {
+  font-family: "Aktiv Grotesk", sans-serif;
+  color: #53565a;
+  background: none;
+  border: none;
+  font-size: clamp(18px, 3vw, 24px);
+  cursor: pointer;
+  position: absolute;
+  bottom: clamp(24px, 6vw, 48px);
+  z-index: 300;
+  transition: 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #e9d597;
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+.sidebar-left .toggle-button {
+  left: clamp(14px, 3.5vw, 28px);
+}
+
+.sidebar-right .toggle-button {
+  right: clamp(14px, 3.5vw, 28px);
+}

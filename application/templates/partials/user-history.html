@@ -1,16 +1,38 @@
-<article class="user-history">
-    <div class="organizer">
-        <div class="user-info">
-            <h3>{{ title }}</h3> {% if data %}
-                <ul class="search-results"> {% for item in data %}
-                    <li class="result-item"> <div class="result-info">
-                            <span class="label">Tool Name:</span> {{ item[1] }}<br> <span class="label">Search Query:</span> {{ item[2] }}<br> <span class="label">Timestamp:</span> {{ item[3] }} </div>
-                    </li>
-                {% endfor %}
-                </ul>
-            {% elif request.method == 'POST' %}
-                <p class="no-results">No results found for your search.</p> {% else %}
-                <p class="no-history">Your search history is currently empty.</p> {% endif %}
-        </div>
+<div class="history-info">
+    <h3>{{ title }}</h3>
+    {% if data %}
+    <ul class="search-results">
+        {% for item in data %}
+        <li class="result-item">
+            <div class="result-info">
+                <span class="label">Prompt:</span> {{ item[2] }}<br>
+                <span class="label">Timestamp:</span> {{ item[3] }}
+            </div>
+        </li>
+        {% endfor %}
+        <button type="button" onclick="clearHistory(); return false;" class="favorite-button">Clear History</button>
+    </ul>
+    <div class="user-paging">
+        {% if total_pages > 1 %}
+        {% if current_page > 1 %}
+        <a href="{{ url_for('history.history', page=current_page - 1) }}">Previous</a>
+        {% endif %}
+
+        {% for page in range(1, total_pages + 1) %}
+        {% if page == current_page %}
+        <span class="current-page">{{ page }}</span>
+        {% else %}
+        <a href="{{ url_for('history.history', page=page) }}">{{ page }}</a>
+        {% endif %}
+        {% endfor %}
+
+        {% if current_page < total_pages %} <a href="{{ url_for('history.history', page=current_page + 1) }}">Next</a>
+            {% endif %}
+            {% endif %}
     </div>
-</article>
+    {% elif request.method == 'POST' %}
+    <p class="no-results">No results found for your search.</p>
+    {% else %}
+    <p class="no-history">Your search history is currently empty.</p>
+    {% endif %}
+</div>

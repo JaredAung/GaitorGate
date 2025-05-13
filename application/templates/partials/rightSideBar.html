@@ -1,4 +1,4 @@
-<div class="sidebar-right collapsed" id="sidebarRight">
+<div class="sidebar-right expanded" id="sidebarRight">
     <button class="toggle-button" id="toggleRight">&#9776;</button>
     <nav>
         <ul class="right-nav">
@@ -6,31 +6,31 @@
             <li>
                 <a href="/logout" class="profile-link">
                     <div class="icon-container">
-                        <img src="/static/imgs/avatar.png" alt="Log Out Icon" class="sidebar-icon">
+                        <img src="/static/imgs/logout.png" alt="Log Out Icon" class="sidebar-icon">
                     </div>
                     Log Out
                 </a>
             </li>
             {% else %}
-            {% if session.username %}
-            <li>
-                <a href="/account" class="profile-link">
-                    <div class="icon-container">
-                        <img src="/static/imgs/user.png" alt="Profile Picture" class="sidebar-icon">
-                    </div>
-                    {{ session.username }}
-                </a>
-            </li>
-            {% else %}
-            <li>
-                <a href="/login" class="profile-link">
-                    <div class="icon-container">
-                        <img src="/static/imgs/user.png" alt="Log In Icon" class="sidebar-icon">
-                    </div>
-                    Log In
-                </a>
-            </li>
-            {% endif %}
+                {% if session.username %}
+                <li>
+                    <a href="/account" class="profile-link">
+                        <div class="icon-container">
+                            <img src="{{ session.profile_pic_url }}" alt="Profile Picture" class="pfp-icon">
+                        </div>
+                        {{ session.username }}
+                    </a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="/login" class="profile-link">
+                        <div class="icon-container">
+                            <img src="/static/imgs/user.png" alt="Log In Icon" class="sidebar-icon">
+                        </div>
+                        Log In
+                    </a>
+                </li>
+                {% endif %}
             {% endif %}
             <!-- Left in here in case we come back to it after P1s are done and we have time
             <li>
@@ -41,22 +41,30 @@
                     Alli Chat
                 </a>
             </li>-->
+            {% if session.username %}
             <li>
                 <a href="/saved" class="saved">
                     <div class="icon-container">
                         <img src="/static/imgs/star.png" alt="Saved Icon" class="sidebar-icon">
                     </div>
-                    Favorites
+                    Saved
                 </a>
             </li>
-            <li>
-                <a href="/settings" class="settings">
-                    <div class="icon-container">
-                        <img src="/static/imgs/settings.png" alt="Settings Icon" class="sidebar-icon">
-                    </div>
-                    Settings
-                </a>
-            </li>
+            {% else %}
+            {% endif %}
+            {% if session.username %}
+                {% if session.Account_Type == 'Company' %}
+                <li>
+                    <a href="/dataUpdate" class="settings">
+                        <div class="icon-container">
+                            <img src="/static/imgs/settings.png" alt="Settings Icon" class="sidebar-icon">
+                        </div>
+                        Update
+                    </a>
+                </li>
+                {% else %}
+                {% endif %}
+            {% endif %}
         </ul>
     </nav>
 </div>

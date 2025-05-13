@@ -1,5 +1,6 @@
-<h2>Register</h2>
 <div class="registration-form">
+    <h2>Register</h2>
+
     {% if registrationMessage %}
     <div class="error-message">
         {{ registrationMessage }}
@@ -8,6 +9,11 @@
 
     <form method="POST" action="/register" novalidate>
         <div class="registration-item">
+            <label for="profile_pic_url">Thumbnail URL:</label>
+            <input type="url" name="profile_pic_url" id="profile_pic_url" placeholder="https://example.com/image.jpg" />
+        </div>
+        
+        <div class="registration-item">
             <label for="email">Email: </label>
             <input type="email" name="email" id="email" placeholder="user@email.ext" required />
         </div>
@@ -15,6 +21,45 @@
         <div class="registration-item">
             <label for="username">Username: </label>
             <input type="text" name="username" id="username" placeholder="Username" required />
+        </div>
+
+        <div class="registration-item">
+            <label for="account_type">Account Type:</label>
+            <select name="account_type" id="account_type" class="role-dropdown">
+                <option class="dropdown-option" value="General" selected>General</option>
+                <option class="dropdown-option" value="Student">Student</option>
+                <option class="dropdown-option" value="Company">Company</option>
+            </select>
+        </div>
+
+        <div id="student_fields">
+            <div class="registration-item">
+                <label for="university">University:</label>
+                <input type="text" name="university" id="university" placeholder="University" value="SFSU" />
+            </div>
+            <div class="registration-item">
+                <label for="major">Major:</label>
+                <input type="text" name="major" id="major" placeholder="Major" />
+            </div>
+            <div class="registration-item">
+                <label for="graduation_year">Graduation Year:</label>
+                <input type="text" name="graduation_year" id="graduation_year" placeholder="Graduation Year" />
+            </div>
+        </div>
+
+        <div id="company_fields" style="display:none;">
+            <div class="registration-item">
+                <label for="company_name">Company Name:</label>
+                <input type="text" name="company_name" id="company_name" placeholder="Company Name" />
+            </div>
+            <div class="registration-item">
+                <label for="website">Website:</label>
+                <input type="url" name="website" id="website" placeholder="https://example.com" />
+            </div>
+            <div class="registration-item">
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" placeholder="Company Description"></textarea>
+            </div>
         </div>
 
         <div class="registration-item">
@@ -34,3 +79,4 @@
         </div>
     </form>
 </div>
+<script src="{{ url_for('static', filename='js/fields.js') }}"></script>

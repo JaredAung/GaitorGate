@@ -1,0 +1,6 @@
+<form class="chat-form" method="POST" action="/chat" id="chat-form">
+    <input type="hidden" name="index_id" value="{{ index_id }}">
+    <textarea name="chat_text" placeholder="What's on your mind?" required rows="3" id="chat_text"></textarea>
+    <button type="submit" class="submit-chat">Post Message</button>
+</form>
+<script src="{{ url_for('static', filename='js/textentry.js') }}"></script>

@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/Source_Sans_3/static/SourceSans3-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/Source_Sans_3/static/SourceSans3-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/Source_Sans_3/static/SourceSans3-Italic.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/Cormorant_Garamond/static/CormorantGaramond-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/Cormorant_Garamond/static/CormorantGaramond-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/Cormorant_Garamond/static/CormorantGaramond-Italic.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("../fonts/Aktiv_Grotesk/static/AktivGrotesk-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("../fonts/Aktiv_Grotesk/static/AktivGrotesk-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("../fonts/Aktiv_Grotesk/static/AktivGrotesk-Italic.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}

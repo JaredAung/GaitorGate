@@ -1,0 +1,174 @@
+@import url(fonts.css);
+
+@media (max-width: 1320px) {
+
+  .left-nav li a,
+  .right-nav li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: -9999px;
+    transition: 0.3s ease;
+  }
+
+  .alli {
+    bottom: 2px;
+    right: 0px;
+  }
+
+  .alli:hover {
+    bottom: 16px;
+  }
+
+  .chatlogo {
+    height: 25%;
+    width: 25%;
+  }
+
+  article {
+    margin-bottom: 64px;
+  }
+
+  form .search-form {
+    align-items: center;
+    display: inline-flex;
+    min-width: 75px;
+    max-width: 500px;
+  }
+
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(8px, 1vw, 16px);
+    padding: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .search-form h2,
+  .search-form .filter-dropdown,
+  .search-form .submit-button {
+    margin-right: 0;
+    margin-bottom: clamp(5px, 1.25vw, 10px);
+    width: 75%;
+    min-width: 128px;
+    text-align: center;
+  }
+
+  .search-form .add-filter-button,
+  .search-form .remove-filter-button {
+    margin-right: 0;
+    margin-bottom: clamp(5px, 1.25vw, 10px);
+    min-width: 64px;
+    text-align: center;
+  }
+
+  .search-form .search-bar {
+    margin-bottom: clamp(5px, 1.25vw, 10px);
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .tool-container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: clamp(32px, 8vw, 96px);
+    margin-bottom: clamp(54px, 1.5vw, 96px);
+  }
+
+  .tool-container h2 {
+    margin-top: clamp(12px, 8vw, 24px);
+  }
+
+
+  .tool-header {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .tool-link {
+    font-size: clamp(16px, 1.5vw, 18px);
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .tool-thumbnail {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+
+  .tool-body {
+    grid-template-columns: 1fr;
+    gap: clamp(8px, 2vw, 16px);
+    margin: clamp(10px, 3vw, 20px) 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px;
+
+  }
+
+  .tool-description {
+    padding: clamp(15px, 3vw, 25px);
+    font-size: clamp(14px, 1.1vw, 16px);
+    margin: clamp(15px, 3vw, 25px) 0;
+  }
+
+  .tool-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 15px);
+    margin-top: 20px;
+  }
+
+  .registration-form,
+  .login-form,
+  .upload-form {
+    padding: clamp(16px, 4vw, 32px);
+    border-radius: clamp(4px, 1vw, 8px);
+    max-width: clamp(320px, 60vw, 640px);
+    margin-top: clamp(18px, 8vw, 36px);
+    margin-bottom: clamp(32px, 154px, 180px);
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .favorite-item {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+  }
+
+  .review {
+    padding: 4px;
+    width: 80%;
+  }
+
+  .history-info {
+    margin-top: clamp(48px, 8vw, 124px);
+    margin-bottom: clamp(32px, 154px, 180px);
+    margin-left: auto;
+    margin-right: auto;
+    width: 37.5%;
+  }
+
+  .info {
+    width: 22.5%;
+  }
+
+  .results-container {
+    margin-bottom: clamp(32px, 154px, 180px);
+  }
+
+  .admin-info {
+    margin-bottom: clamp(32px, 154px, 180px);
+  }
+
+}

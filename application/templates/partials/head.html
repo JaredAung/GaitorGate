@@ -1,8 +1,41 @@
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JD8SPMESKP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JD8SPMESKP');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="Ulices Gonzalez" />
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="static/css/images.css">
+    <link rel="stylesheet" type="text/css" href="static/css/sides.css">
+    <link rel="stylesheet" type="text/css" href="static/css/forms.css">
+    <link rel="stylesheet" type="text/css" href="static/css/results.css">
+    <link rel="stylesheet" type="text/css" href="static/css/favrate.css">
+    <link rel="stylesheet" type="text/css" href="static/css/tools.css">    
+    <link rel="stylesheet" type="text/css" href="static/css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="static/css/popup.css">
     <link rel="icon" href="/static/favicon.ico">
     <title>{{ title }}</title>
+
+    <div id="welcomePopup" class="popup">
+      <div class="popup-content">
+        <div class="popup-header">
+          <h3>Welcome to Gaitor Gate!</h3>
+          <span class="close-popup">&times;</span>
+        </div>
+        <div class="popup-text">
+          <p>Click "Gaitor Gate" at the top to return to your dashboard at anytime.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="static/js/popup.js"></script>
 </head>
+

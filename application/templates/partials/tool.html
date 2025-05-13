@@ -1,0 +1,58 @@
+<div id="tool-{{ id }}" class="tool-container">
+    <h2>
+        <a href="{{ item.url }}" target="_blank" class="tool-title">{{ item.name }}</a>
+    </h2>
+
+    {% if item.thumbnail_url %}
+    <img src="{{ item.thumbnail_url }}" alt="{{ item.name }} thumbnail" class="tool-thumbnail" height="21.25%"
+        width="21.25%">
+    {% endif %}
+
+    <div class="tool-rating">
+        
+        {% if average_rating %}
+        <span class="rating-value">{{ average_rating | default(0) | round(2) }}/5.0</span>
+        {% else %}
+        <span class="no-rating">No ratings yet</span>
+        {% endif %}
+    </div>
+
+    <div class="tool-body">
+        <div><strong>Version:</strong> {{ item.version }}</div>
+        <div><strong>Released:</strong> {{ item.published_date }}</div>
+        <div><strong>Platform:</strong> {{ item.platform }}</div>
+        <div><strong>Category:</strong> {{ item.category }}</div>
+        <div><strong>Price:</strong> {{ item.pricing }}</div>
+    </div>
+
+    <div class="tool-description">
+        {{ item.description or "No description provided." }}
+    </div>
+
+    <div class="tool-reviews">
+        <h4>Reviews</h4>
+        {% if reviewdata %}
+        {% for review in reviewdata %}
+        <div class="review">
+            <div class="review-header">
+                <span class="review-user">{{ review.username }}</span>
+                <span class="review-date">{{ review.created_at }}</span>
+            </div>
+            <p class="review-text">{{ review.review_text }}</p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No reviews yet.</p>
+        {% endif %}
+    </div>
+
+    {% set index_id = item.idIndex %}
+    {% if session.username %}
+    {% include 'partials/favorite-button.html' %}
+    {% include 'partials/rating-form.html' %}
+    {% include 'partials/review-form.html' %}
+    {% else %}
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='js/stars.js') }}"></script>

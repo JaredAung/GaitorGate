@@ -1,0 +1,241 @@
+@import url(fonts.css);
+
+* {
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(../imgs/sfsu.jpg);
+  background-position: right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans 3", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100%;
+  min-width: 375px;
+  margin: 0;
+  padding-top: clamp(16px, 4vw, 32px);
+  box-sizing: border-box;
+}
+
+main {
+  font-family: "Source Sans 3", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gator {
+  background-color: #C99700;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header img.logo {
+  margin: clamp(5px, 1.25vw, 10px);
+}
+
+header h1 {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: clamp(18px, 3vw, 54px);
+  padding-inline: 0px;
+}
+
+h2 {
+  font-family: 'Aktiv Grotesk', sans-serif;
+  font-size: clamp(18px, 3vw, 24px);
+  text-decoration: underline;
+  margin-bottom: clamp(9px, 1.5vw, 18px);
+  text-align: center;
+}
+
+h3 {
+  font-family: "Aktiv Grotesk", sans-serif;
+  font-size: clamp(14px, 1.25vw, 16px);
+  text-decoration: underline;
+  margin-top: clamp(36px, 8vw, 128px);
+  margin-bottom: clamp(9px, 1.5vw, 18px);
+  text-align: center;
+}
+
+h4 {
+  font-family: "Aktiv Grotesk", sans-serif;
+  font-size: clamp(14px, 1.25vw, 16px);
+  text-decoration: underline;
+  margin-top: clamp(36px, 8vw, 48px);
+  margin-bottom: clamp(9px, 1.5vw, 18px);
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  padding-bottom: clamp(18px, 4.5vw, 36px);
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #f0f0f0;
+  font-size: clamp(24px, 7vw, 36px);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.home-button {
+  font-style: italic;
+  color: #e9d597;
+  text-shadow: 1px 1px 2px rgba(96, 76, 17, 0.925);
+  letter-spacing: clamp(4px, 1vw, 8px);
+}
+
+a:hover {
+  color: #933311;
+  font-size: clamp(28px, 8vw, 40px);
+  font-weight: bold;
+}
+
+.home-button:hover {
+  font-size: clamp(24px, 7vw, 36px);
+}
+
+.alli {
+  z-index: 50;
+  position: fixed;
+  bottom: -28px;
+  right: -330px;
+  transition: 0.3s ease;
+}
+
+.alli:hover {
+  bottom: 12px;
+  transition: 0.3s ease;
+}
+
+.chatlogo {
+  height: 15%;
+  width: 15%;
+} 
+
+footer {
+  background-color: #e9d597;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 100;
+  padding-top: 4px;
+}
+
+.about-button {
+  font-size: clamp(18px, 3vw, 24px);
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.about-button:hover {
+  font-size: clamp(24px, 3vw, 36px);
+  color: #463077;
+}
+
+.paging {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.paging a,
+.paging span,
+.paging .current-page {
+  font-size: clamp(18px, 3vw, 24px);
+  display: inline-block;
+  padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 12px);
+  margin-right: clamp(2px, 0.5vw, 5px);
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.paging .current-page {
+  background-color: #38635a;
+  color: #ffffff;
+}
+
+.paging a:hover,
+.paging span:hover {
+  background-color: #604c11;
+  color: #ffffff;
+}
+
+.user-paging {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: clamp(48px, 3vw, 128px);
+}
+
+.user-paging a,
+.user-paging span,
+.user-paging .current-page {
+  font-size: clamp(18px, 3vw, 24px);
+  display: inline-block;
+  padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 12px);
+  margin-right: clamp(2px, 0.5vw, 5px);
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.user-paging .current-page {
+  background-color: #38635a;
+  color: #ffffff;
+}
+
+.user-paging a:hover,
+.user-paging span:hover {
+  background-color: #604c11;
+  color: #ffffff;
+}
+
+.error-message {
+  color: #933311;
+  background-color: #f4f4f4;
+  padding: clamp(8px, 2vw, 12px);
+  border-radius: 4px;
+  border: 1px solid #f6f6f6;
+  margin-bottom: clamp(10px, 2.5vw, 20px);
+  font-family: "Aktiv Grotesk", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-size: clamp(14px, 1.25vw, 16px);
+  width: 100%;
+  box-sizing: border-box;
+}

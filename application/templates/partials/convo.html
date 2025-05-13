@@ -1,0 +1,24 @@
+<div id="chat-container" class="chat-container">
+    {% if not user_prompt and request.method == 'GET' %}
+    <div class="chat-item bot-message initial-message">
+        <div class="chat-message">
+            <p><strong>Alli:</strong> Welcome to Gaitor Gate! My name is Alli Gator, How can I help you find AI tools today?</p>
+        </div>
+    </div>
+    {% elif user_prompt %}
+    <div class="chat-item user-message">
+        <div class="chat-message">
+            <p><strong>{{session.username}}:</strong> {{ user_prompt }}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% if response %}
+    <div class="chat-item bot-message">
+        <div class="chat-message">
+            <p><strong>Alli:</strong> {{ response|safe }}</p>
+        </div>
+    </div>
+    {% elif request.method == 'POST' and not response %}
+    <p>No response received.</p>
+    {% endif %}
+</div>

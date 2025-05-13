@@ -1,20 +1,60 @@
-<article class="user-saved">
-    <div class="organizer">
-        <div class="user-info">
-            <h3>{{ user.username }}'s Saved Results</h3>
-            {% if data %}
-            {% for item in data %}
-            <div class="result-item">
-                <br>
-                <div class="result-info">
-                    <!-- Left this blank for back end to hook up, works same as search results but would be focused on saved results-->
-                </div>
-                </br>
+<div class="history-info">
+    <h3>{{ user.username }}'s Saved Results</h3>
+    {% if data %}
+    <ul class="search-results">
+        {% for item in data %}
+        <div class="favorite-item">
+            <br>
+            <div class="result-info">
+                <p><strong>{{ item.name }}</strong> by {{ item.company }}</p>
+                <p>
+                    Category: {{ item.category or 'N/A' }} |
+                    Published: {{ item.published_date or 'N/A' }} |
+                    Price: ${{ item.pricing or 'Free' }}
+                </p>
+                <p>{{ item.description }}</p>
+                <p><a href="{{ item.url }}" target="_blank" class="view-link">View Tool</a></p>
             </div>
-            {% endfor %}
-            {% elif request.method == 'POST' %}
-            <p>No results found.</p>
+
+            {% if item.thumbnail_url %}
+            <div class="result-thumbnail">
+                <img src="{{ item.thumbnail_url }}" alt="{{ item.name }}" height="25%" width="25%">
+            </div>
             {% endif %}
+
+            <div class="favorite-actions">
+                <form method="POST" action="{{ url_for('favorites.toggle_favorite') }}">
+                    <input type="hidden" name="index_id" value="{{ item.idIndex }}">
+                    <button type="submit" class="favorite-button favorited">
+                        <i class="fas fa-heart"></i> Remove from Favorites
+                    </button>
+                </form>
+            </div>
+            </br>
         </div>
+        {% endfor %}
+        <button type="button" onclick="clearFavorites(); return false;" class="favorite-button">Clear Favorites</button>
+    </ul>
+    <div class="user-paging">
+        {% if total_pages > 1 %}
+        {% if current_page > 1 %}
+        <a href="{{ url_for('favorites.view_saved', page=current_page - 1) }}">Previous</a>
+        {% endif %}
+
+        {% for page in range(1, total_pages + 1) %}
+        {% if page == current_page %}
+        <span class="current-page">{{ page }}</span>
+        {% else %}
+        <a href="{{ url_for('favorites.view_saved', page=page) }}">{{ page }}</a>
+        {% endif %}
+        {% endfor %}
+
+        {% if current_page < total_pages %} <a href="{{ url_for('favorites.view_saved', page=current_page + 1) }}">
+            Next</a>
+            {% endif %}
+            {% endif %}
     </div>
-</article>
+    {% else %}
+    <p>You haven't saved any results yet.</p>
+    {% endif %}
+</div>

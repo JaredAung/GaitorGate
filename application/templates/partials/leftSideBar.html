@@ -1,32 +1,16 @@
-<div class="sidebar-left collapsed" id="sidebarLeft">
+<div class="sidebar-left expanded" id="sidebarLeft">
     <button class="toggle-button" id="toggleLeft">&#9776;</button>
     <nav>
         <ul class="left-nav">
             <li>
-                <a href="/dataUpload" class="data_upload">
-                    <div class="icon-container">
-                        <img src="/static/imgs/upload.png" alt="Data Upload Icon" class="sidebar-icon">
-                    </div>
-                    Upload
-                </a>
-            </li>
-            <li>
-                <a href="/dashboard" class="new_search">
+                <a href="/mainSearch" class="new_search">
                     <div class="icon-container">
                         <img src="/static/imgs/search.png" alt="New Search Icon" class="sidebar-icon">
                     </div>
                     Search
                 </a>
             </li>
-            <!-- Left in here in case we come back to it after P1s are done and we have time
-            <li>
-                <a href="/" class="predictive_search">
-                    <div class="icon-container">
-                        <img src="/static/imgs/predict.png" alt="Predictive Search Icon" class="sidebar-icon">
-                    </div>
-                    AI Predict
-                </a>
-            </li>-->
+            {% if session.username %}
             <li>
                 <a href="/history" class="history">
                     <div class="icon-container">
@@ -35,6 +19,21 @@
                     History
                 </a>
             </li>
+            {% else %}
+            {% endif %}
+            {% if session.username %}
+                {% if session.Account_Type == 'Company' %}
+                <li>
+                    <a href="/dataUpload" class="data_upload">
+                        <div class="icon-container">
+                            <img src="/static/imgs/upload.png" alt="Data Upload Icon" class="sidebar-icon">
+                        </div>
+                        Upload
+                    </a>
+                </li>
+                {% else %}
+                {% endif %}
+            {% endif %}
         </ul>
     </nav>
 </div>

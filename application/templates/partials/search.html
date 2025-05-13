@@ -1,5 +1,24 @@
-<h2>Search</h2>
 <div class="search-form">
+    <div class="sort-container">
+        <select name="order_by" class="sort-dropdown">
+            <option value="rating" {% if request.args.get('order_by')=='rating' %}selected{% endif %}>
+                Top Rated
+            </option>
+            <option value="date" {% if request.args.get('order_by')=='date' %}selected{% endif %}>
+                Newest
+            </option>
+            <option value="name" {% if request.args.get('order_by')=='name' %}selected{% endif %}>
+                A-Z
+            </option>
+            <option value="review" {% if request.args.get('order_by')=='review' %}selected{% endif %}>
+                Most Reviewed
+            </option>
+        </select>
+    </div>
+    <div class="filter-buttons">
+        <button type="button" class="add-filter-button">Add</button>
+        <button type="button" class="remove-filter-button">Remove</button>
+    </div>
     <div class="filter-container">
         <select name="filters[]" class="filter-dropdown">
             <option class="dropdown-option" value="">Filter</option>
@@ -11,11 +30,12 @@
             <option class="dropdown-option" value="">Option</option>
         </select>
     </div>
-    <input class="search-bar" type="text" name="search" placeholder="Search">
-    <div class="filter-buttons">
-        <button type="add-button" class="add-filter-button">+</button>
-        <button type="remove-button" class="remove-filter-button">-</button>
-    </div>
+    <input 
+        class="search-bar" 
+        type="text" 
+        name="search" 
+        placeholder="Search"
+        value="{{ search if search else request.args.get('search', '') }}">
     <button class="submit-button" type="submit">Search</button>
     <script src="{{ url_for('static', filename='js/dropdowns.js') }}"></script>
 </div>

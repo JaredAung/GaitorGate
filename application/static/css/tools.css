@@ -1,0 +1,282 @@
+@import url(fonts.css);
+
+.tool-container {
+  width: 37.5%;
+  margin-top: clamp(36px, 8vw, 128px);
+  margin-bottom: clamp(104px, 8vw, 128px);
+  background-color: #E9EAEA;
+  border-radius: clamp(4px, 1vw, 8px);
+  padding: clamp(8px, 2vw, 16px);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(96, 76, 17, 1);
+}
+
+.tool-container h4 {
+  margin-top: clamp(6px, 8vw, 18px);
+}
+
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tool-link {
+  color: #933311;
+  font-size: clamp(14px, 1.25vw, 16px);
+  word-break: break-word;
+}
+
+.tool-link:hover {
+  color: #38635a;
+}
+
+.tool-thumbnail {
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tool-rating {
+  margin: 10px 0;
+}
+
+.average-rating {
+  --star-size: 24px;
+  position: relative;
+  display: inline-block;
+  font-size: var(--star-size);
+  letter-spacing: 2px;
+}
+
+.average-rating::before {
+  content: "★★★★★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--rating);
+  overflow: hidden;
+  color: gold;
+}
+
+.rating-value {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.no-rating {
+  color: #666;
+}
+
+.tool-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 15px 0;
+  color: #555;
+  padding: 15px;
+  background: #F6F6F7;
+  border-radius: 8px;
+}
+
+.tool-reviews {
+  background: #F6F6F7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool-description {
+  padding: 15px;
+  background: #F6F6F7;
+  border-radius: 8px;
+}
+
+.review {
+  padding: 15px;
+  background: #E9EAEA;
+  border-radius: 8px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.review-text {
+  margin: 0;
+}
+
+.tool-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.tool-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tool-title {
+  text-decoration: none;
+  color: #933311;
+  transition: 0.3s ease;
+  font-size: clamp(36px, 1.25vw, 48px);
+}
+
+.tool-title:hover {
+  color: #38635a;
+  font-size: clamp(36px, 1.25vw, 48px);
+}
+
+.star {
+  font-size: 20px;
+  color: gray;
+}
+
+.star.full {
+  color: #c99700;
+}
+
+.star.half {
+  position: relative;
+  display: inline-block;
+  color: gray;
+}
+
+.admin-info {
+  width: 60%;
+  margin-top: clamp(32px, 8vw, 124px);
+  margin-bottom: 96px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: clamp(4px, 1vw, 8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 24px;
+  box-shadow: 0 0 10px rgba(96, 76, 17, 1);
+}
+
+.user-info {
+  width: 37.50%;
+  margin-top: clamp(32px, 8vw, 124px);
+  margin-bottom: 96px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: clamp(4px, 1vw, 8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 24px;
+  box-shadow: 0 0 10px rgba(96, 76, 17, 1);
+}
+
+.admin-info .tool-container {
+  width: 85%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: rgba(83, 86, 90, 0.125);
+  border-radius: clamp(4px, 1vw, 8px);
+  padding: clamp(8px, 2vw, 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(96, 76, 17, 0);
+}
+
+.user-info .tool-container {
+  width: 75%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: rgba(83, 86, 90, 0.125);
+  border-radius: clamp(4px, 1vw, 8px);
+  padding: clamp(8px, 2vw, 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(96, 76, 17, 0);
+}
+
+.admin-info h2 {
+  margin-top: 0px;
+}
+
+.admin-info .tool-list {
+  padding-bottom: 0px;
+  width: 94%;
+}
+
+.admin-info .tool-body {
+  padding-bottom: 0px;
+  width: 94%;
+}
+
+.user-info .tool-body {
+  padding-bottom: 0px;
+}
+
+
+.user-info .tool-list {
+  padding-bottom: 0px;
+}
+
+.admin-info .review {
+  width: 90%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: #f8f8f8;
+  border-radius: clamp(4px, 1vw, 8px);
+}
+
+.user-info .review {
+  width: 80%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: #f8f8f8;
+  border-radius: clamp(4px, 1vw, 8px);
+}
+
+.dash {
+  margin-top: 16px;
+}
+
+.admin-info .review-header {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-info .review-header {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat-info {
+  width: 60%;
+  margin-top: clamp(32px, 8vw, 124px);
+  margin-bottom: 96px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: clamp(4px, 1vw, 8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 24px;
+  box-shadow: 0 0 10px rgba(96, 76, 17, 1);
+}

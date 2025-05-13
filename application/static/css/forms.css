@@ -1,0 +1,380 @@
+@import url(fonts.css);
+
+form {
+  display: block;
+  align-items: initial;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+}
+
+form .search-form {
+  align-items: center;
+  display: inline-flex;
+  min-width: 720px;
+  max-width: 960px;
+}
+
+.search-form {
+  background-color: #f0f0f0;
+  padding: clamp(8px, 4vw, 16px);
+  border-radius: clamp(4px, 1vw, 8px);
+  box-shadow: 0 0 10px rgba(96, 76, 17, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(8px, 1vw, 16px);
+  margin-top: clamp(32px, 8vw, 124px);
+}
+
+.search-form h2,
+.search-form .sort-dropdown,
+.search-form .filter-dropdown,
+.search-form .submit-button {
+  margin-right: 0;
+  margin-bottom: clamp(5px, 1.25vw, 10px);
+  width: 75%;
+  min-width: 128px;
+  text-align: center;
+}
+
+.search-form .add-filter-button,
+.search-form .remove-filter-button {
+  margin-right: 0;
+  margin-bottom: clamp(5px, 1.25vw, 10px);
+  text-align: center;
+  justify-content: center;
+}
+
+.search-form .search-bar {
+  margin-right: 0;
+  margin-bottom: clamp(5px, 1.25vw, 10px);
+  width: 75%;
+  text-align: center;
+  justify-content: center;
+}
+
+.sort-dropdown {
+  background-color: #38635a;
+  color: #f0f0f0;
+  padding: clamp(8px, 1.25vw, 10px);
+  border: 1px solid #26547c;
+  border-radius: clamp(4px, 1vw, 8px);
+  font-size: clamp(14px, 1.25vw, 16px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-align-last: center;
+}
+
+.sort-dropdown:hover {
+  background-color: #53565a;
+  border-color: #604c11;
+}
+
+.sort-dropdown option {
+  background-color: #53565a;
+  font-size: clamp(14px, 1.25vw, 16px);
+  text-align: left;
+  padding: 8px;
+}
+
+.sort-container label {
+  font-family: "Aktiv Grotesk", sans-serif;
+  font-size: clamp(14px, 1.25vw, 16px);
+  color: #53565a;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.filter-dropdown,
+.add-filter-button,
+.remove-filter-button,
+.add-platform-button,
+.remove-platform-button,
+.role-dropdown {
+  background-color: #38635a;
+  color: #f0f0f0;
+  padding: clamp(8px, 1.25vw, 10px);
+  border: 1px solid #26547c;
+  border-radius: clamp(4px, 1vw, 8px);
+  font-size: clamp(14px, 1.25vw, 16px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-align-last: center;
+}
+
+.role-dropdown {
+  width: 100%;
+}
+
+.filter-dropdown:hover,
+.add-filter-button:hover,
+.remove-filter-button:hover,
+.role-dropdown:hover {
+  background-color: #53565a;
+}
+
+.dropdown-option {
+  background-color: #53565a;
+  font-size: clamp(14px, 1.25vw, 16px);
+  width: clamp(96px, 10vw, 128px);
+  text-align: Left;
+}
+
+.dropdown-options li {
+  padding: clamp(4px, 1vw, 8px);
+  cursor: pointer;
+}
+
+.search-bar {
+  background-color: #E9EAEA;
+  padding: clamp(8px, 1.25vw, 10px);
+  border: 1px solid;
+  border-radius: clamp(4px, 1vw, 8px);
+  font-size: clamp(14px, 1.25vw, 16px);
+  width: clamp(25%, 30vw, 75%);
+  text-align: left;
+}
+
+.submit-button[type="submit"] {
+  padding: clamp(8px, 1.25vw, 10px) clamp(16px, 2.5vw, 20px);
+  background-color: #26547c;
+  color: #f0f0f0;
+  font-size: clamp(14px, 1.25vw, 16px);
+  border: none;
+  border-radius: clamp(4px, 1vw, 8px);
+  cursor: pointer;
+  width: clamp(72px, 7.5vw, 96px);
+  transition: 0.3s ease;
+}
+
+.submit-button[type="submit"]:hover {
+  background-color: #53565a;
+}
+
+.registration-form,
+.login-form,
+.upload-form {
+  background-color: #E9EAEA;
+  padding: clamp(16px, 4vw, 32px);
+  border-radius: clamp(4px, 1vw, 8px);
+  box-shadow: 0 0 10px rgba(96, 76, 17, 0.25);
+  max-width: clamp(320px, 60vw, 640px);
+  margin-top: clamp(32px, 8vw, 124px);
+  margin-bottom: clamp(32px, 96px, 124px);
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(96, 76, 17, 1);
+}
+
+.registration-item,
+.login-item,
+.upload-item {
+  margin-bottom: clamp(12px, 3vw, 24px);
+}
+
+.registration-item label,
+.login-item label,
+.upload-item label {
+  display: block;
+  margin-bottom: clamp(4px, 1vw, 8px);
+  font-weight: bold;
+  color: #53565a;
+  text-align: left;
+}
+
+.registration-item input[type="email"],
+.registration-item input[type="text"],
+.registration-item input[type="password"],
+.registration-item input[type="url"],
+.login-item input[type="email"],
+.login-item input[type="text"],
+.login-item input[type="password"],
+.upload-item input[type="text"],
+.upload-item input[type="text"],
+.upload-item input[type="file"],
+.upload-item input[type="url"],
+.upload-item input[type="number"] {
+  width: 100%;
+  padding: clamp(8px, 1.5vw, 12px);
+  border: 1px solid #53565a;
+  border-radius: 4px;
+  font-size: clamp(14px, 1.25vw, 16px);
+  box-sizing: border-box;
+}
+
+.registration-item input::placeholder,
+.login-item input::placeholder,
+.upload-item input::placeholder {
+  color: #604c11;
+}
+
+.registration-button .logging-button,
+.uploading-button {
+  display: flex;
+  gap: clamp(8px, 2vw, 16px);
+  justify-content: center;
+  margin-top: clamp(16px, 4vw, 32px);
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.register-button,
+.login-button,
+.reset-button,
+.upload-button {
+  padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 24px);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: clamp(14px, 1.25vw, 16px);
+  transition: 0.3s ease;
+  text-align: center;
+  min-width: clamp(80px, 15vw, 100px);
+  box-sizing: border-box;
+}
+
+.register-button {
+  background-color: #6b702b;
+  color: #ffffff;
+}
+
+.register-button:hover {
+  background-color: #53565a;
+}
+
+.login-button {
+  background-color: #26547c;
+  color: #ffffff;
+}
+
+.login-button:hover {
+  background-color: #53565a;
+}
+
+.login-button a,
+.register-button a {
+  font-size: clamp(14px, 1.25vw, 16px);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.upload-button {
+  background-color: #604c11;
+  color: #ffffff;
+}
+
+.upload-button:hover {
+  background-color: #53565a;
+}
+
+.reset-button {
+  background-color: #933311;
+  color: #ffffff;
+}
+
+.reset-button:hover {
+  background-color: #53565a;
+}
+
+.platform-dropdown,
+.category-dropdown {
+  background-color: #38635a;
+  color: #f0f0f0;
+  padding: clamp(8px, 1.25vw, 10px);
+  border: 1px solid;
+  border-radius: clamp(4px, 1vw, 8px);
+  font-size: clamp(14px, 1.25vw, 16px);
+  width: clamp(96px, 10vw, 164px);
+  margin-right: clamp(5px, 1.25vw, 10px);
+  transition: 0.3s ease;
+}
+
+.platform-dropdown:hover,
+.category-dropdown:hover {
+  background-color: #53565a;
+}
+
+.platform-dropdown option,
+.category-dropdown option {
+  background-color: #53565a;
+  font-size: clamp(14px, 1.25vw, 16px);
+  text-align: left;
+}
+
+.platform-dropdown option:hover,
+.category-dropdown option:hover {
+  background-color: #53565a;
+}
+
+.button-row {
+  gap: clamp(5px, 2vw, 10px);
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.clear-button {
+  background-color: #38635a;
+  color: #f0f0f0;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #26547c;
+}
+
+.chat-container {
+  margin: clamp(0.5rem, 1vw, 1rem) 0;
+  padding: clamp(0.5rem, 1vw, 1rem);
+  background: #F6F6F7;
+  border-radius: 8px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.chat-form textarea {
+  width: 100%;
+  padding: clamp(0.25rem, 0.5vw, 0.5rem);
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+  font-family: "Aktiv Grotesk", sans-serif;
+  resize: vertical;
+  min-height: clamp(60px, 10vw, 80px);
+  font-size: clamp(14px, 1.25vw, 16px);
+  box-sizing: border-box;
+}
+
+.submit-chat {
+  background: #38635a;
+  color: #ffffff;
+  border: none;
+  padding: clamp(0.25rem, 0.5vw, 0.5rem) clamp(0.5rem, 1vw, 1rem);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: clamp(0.25rem, 0.5vw, 0.5rem);
+  font-family: "Aktiv Grotesk", sans-serif;
+  font-size: clamp(14px, 1.25vw, 16px);
+  box-sizing: border-box;
+}
+
+.submit-chat:hover {
+  background: #26547c;
+}

@@ -1,0 +1,22 @@
+<div class="user-info">
+    <h3 class="dash">Your Reviews</h3>
+    <div class="tool-container">
+        {% if reviews %}
+        {% for review in reviews %}
+        <div class="review">
+            <div class="review-header">
+                {% if review.thumbnail_url %}
+                <img class="review-logo" src="{{ review.thumbnail_url }}" alt="{{ review.tool_name }} logo" width="20"
+                    height="20">
+                {% endif %}
+                <span class="review-user">{{ review.tool_name }}</span>
+                <span class="review-date">{{ review.created_at }}</span>
+            </div>
+            <p class="review-text">{{ review.review_text }}</p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No reviews for your tools yet.</p>
+        {% endif %}
+    </div>
+</div>

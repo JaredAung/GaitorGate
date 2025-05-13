@@ -10,10 +10,12 @@
     {% include 'partials/sidebars.html' %}
 
     <main>
-        <h2>SETTINGS IN PROGRESS</h2>
-        <img class="alligator" src="/static/imgs/alli.png" width="37.5%" height="37.5%" alt="Alli Picture" />
+        <form method="GET" action="/search">
+            {% include 'partials/search.html' %}
+        </form>
     </main>
-
+    
+    {% include 'partials/alli.html' %}
     {% include 'partials/footer.html' %}
 
     <script src="{{ url_for('static', filename='js/toggleSides.js') }}"></script>
